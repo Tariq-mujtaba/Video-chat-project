@@ -2,8 +2,9 @@
 
 // console.log(process.env);
 
-let APP_ID = "Your-Agora-Access-Token";
+// let APP_ID = "Your-Agora-Access-Token";
 //process.env.APP_ID;
+let APP_ID = process.env.NEXT_PUBLIC_APP_ID;
 
 let token = null;
 let uid = String(Math.floor(Math.random() * 10000));
@@ -48,7 +49,8 @@ let init = async () => {
   client = await AgoraRTM.createInstance(APP_ID);
   await client.login({ uid, token });
 
-  channel = client.createChannel(roomId);
+  channel = client.createChanchannel = client.createChan;
+  nel(roomId);
   await channel.join();
 
   channel.on("MemberJoined", handleUserJoined);
