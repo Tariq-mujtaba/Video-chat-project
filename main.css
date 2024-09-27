@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #001f23;
+}
+
+#videos {
+  display: grid;
+  grid-template-columns: 1fr;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.videoplayer {
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  transform: scaleX(-1);
+  object-fit: cover;
+}
+
+#user2 {
+  display: none;
+}
+
+.smallFrame {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  height: 170px;
+  width: 300px;
+  border-radius: 10px;
+  border: 2px solid #5b9489d0;
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.425);
+  z-index: 999;
+}
+
+#controls {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%);
+  display: flex;
+  gap: 1em;
+}
+
+.control-container {
+  background-color: rgb(0, 122, 118, 0.6);
+  padding: 20px;
+  border-radius: 50%;
+  /* border: 0.5px rgba(119, 255, 250, 0.9) solid; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.425);
+}
+
+.control-container img {
+  /* fill: #fff; */
+  filter: invert();
+  height: 30px;
+  width: 30px;
+}
+
+#leave-btn {
+  background-color: rgb(255, 0, 33, 0.6);
+  /* border: 0.5px rgba(255, 119, 137, 0.9) solid; */
+}
+
+@media screen and (max-width: 600px) {
+  .smallFrame {
+    height: 80px;
+    width: 120px;
+  }
+
+  .control-container img {
+    height: 15px;
+    width: 15px;
+  }
+}
