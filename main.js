@@ -1,8 +1,9 @@
-require("dotenv").config();
+// require("dotenv").config();
 
 // console.log(process.env);
 
-let appId = process.env.APP_ID;
+let APP_ID = "Your-Agora-Access-Token";
+//process.env.APP_ID;
 
 let token = null;
 let uid = String(Math.floor(Math.random() * 10000));
@@ -44,7 +45,7 @@ let constraints = {
 };
 
 let init = async () => {
-  client = await AgoraRTM.createInstance(appId);
+  client = await AgoraRTM.createInstance(APP_ID);
   await client.login({ uid, token });
 
   channel = client.createChannel(roomId);
