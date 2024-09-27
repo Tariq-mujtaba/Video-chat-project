@@ -1,10 +1,4 @@
-// require("dotenv").config();
-
-// console.log(process.env);
-
-// let APP_ID = "Your-Agora-Access-Token";
-//process.env.APP_ID;
-let APP_ID = process.env.NEXT_PUBLIC_APP_ID;
+let APP_ID = NEXT_PUBLIC_APP_ID;
 
 let token = null;
 let uid = String(Math.floor(Math.random() * 10000));
